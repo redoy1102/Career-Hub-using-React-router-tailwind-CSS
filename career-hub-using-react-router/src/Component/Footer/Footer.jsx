@@ -1,3 +1,5 @@
+import {NavLink} from "react-router-dom";
+
 const Footer = () => {
     const footerHeaders = [
         ["Company", "About Us", "Work", "Latest News", "Careers"],
@@ -12,7 +14,7 @@ const Footer = () => {
                     return <h6 className="text-white font-semibold text-[20px]" key={index}>{item}</h6>
                 }
                 else{
-                    return <a className="link link-hover text-base" key={index}>{item}</a>
+                    return <NavLink className="link link-hover text-base" key={index}>{item}</NavLink>
                 }
             })
     }

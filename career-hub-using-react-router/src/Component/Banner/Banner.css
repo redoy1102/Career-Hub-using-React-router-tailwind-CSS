@@ -1,0 +1,4 @@
+.btn-gradient {
+    background: linear-gradient(to right, #9873FF, #7E90FE);
+    color: white; /* Ensures the text is visible on the gradient */
+}

@@ -1,7 +1,13 @@
+import Banner from "../Banner/Banner.jsx";
+import Categories from "../Categories/Categories.jsx";
+import Jobs from "../Jobs/Jobs.jsx";
+
 const Home = () => {
     return (
         <div>
-            <h1>I am home</h1>
+            <Banner></Banner>
+            <Categories></Categories>
+            <Jobs></Jobs>
         </div>
     );
 };

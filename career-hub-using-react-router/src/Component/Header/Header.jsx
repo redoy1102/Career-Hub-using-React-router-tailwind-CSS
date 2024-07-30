@@ -1,11 +1,11 @@
-import React from 'react';
 import {NavLink} from "react-router-dom";
+import {paths} from "../../main.jsx";
 
 const Header = () => {
     const links = <>
-        <li><NavLink to="/statistics">Statistics</NavLink></li>
-        <li><NavLink to="/appliedjobs">Applied Jobs</NavLink></li>
-        <li><NavLink to="/blogs">Blogs</NavLink></li>
+        <li><NavLink to={paths[1]} className="text-base font-bold">Statistics</NavLink></li>
+        <li><NavLink to={paths[2]} className="text-base font-bold">Applied Jobs</NavLink></li>
+        <li><NavLink to={paths[3]} className="text-base font-bold">Blogs</NavLink></li>
     </>
     return (
         <div className="navbar bg-base-100">
@@ -33,7 +33,7 @@ const Header = () => {
                         {links}
                     </ul>
                 </div>
-                <NavLink to="/" className="btn btn-ghost text-xl">daisyUI</NavLink>
+                <NavLink to={paths[0]} className="btn btn-ghost text-xl">CareerHub</NavLink>
             </div>
 
             {/*for medium devices*/}
@@ -43,7 +43,7 @@ const Header = () => {
                 </ul>
             </div>
             <div className="navbar-end">
-                <a className="btn">Button</a>
+                <a className="btn">Start Applying</a>
             </div>
         </div>
     );

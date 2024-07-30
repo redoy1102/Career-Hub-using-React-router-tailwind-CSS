@@ -12,29 +12,19 @@ import Statistics from "./Component/Statistics/Statistics.jsx";
 import Blog from "./Component/Blog/Blog.jsx";
 import AppliedJobs from "./Component/AppliedJobs/AppliedJobs.jsx";
 
+export const paths = ["/", "/statistics", "/appliedjobs", "/blogs"]
+// eslint-disable-next-line react/jsx-key
+const elements = [<Home></Home>, <Statistics></Statistics>, <AppliedJobs></AppliedJobs>, <Blog></Blog>]
+
 const router = createBrowserRouter([
     {
-        path: "/",
+        path: paths[0],
         element: <Root></Root>,
         // errorElement: <ErrorPage />,
-        children: [
-            {
-                path: "/",
-                element: <Home></Home>,
-            },
-            {
-                path: "/statistics",
-                element: <Statistics></Statistics>,
-            },
-            {
-                path: "/blogs",
-                element: <Blog></Blog>,
-            },
-            {
-                path: "/appliedjobs",
-                element: <AppliedJobs></AppliedJobs>
-            }
-        ],
+        children: paths.map((path, index) => ({
+            path: path,
+            element: elements[index]
+        }))
     },
 ]);
 

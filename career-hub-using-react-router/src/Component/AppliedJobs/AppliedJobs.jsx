@@ -1,5 +1,4 @@
 
-
 const AppliedJobs = () => {
     return (
         <div>

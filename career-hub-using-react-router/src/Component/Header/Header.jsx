@@ -1,5 +1,6 @@
 import {NavLink} from "react-router-dom";
 import {paths} from "../../main.jsx";
+import '../Banner/Banner.css'
 
 const Header = () => {
     const links = <>
@@ -33,7 +34,7 @@ const Header = () => {
                         {links}
                     </ul>
                 </div>
-                <NavLink to={paths[0]} className="btn btn-ghost text-xl">CareerHub</NavLink>
+                <NavLink to={paths[0]} className="btn btn-ghost text-xl ">CareerHub</NavLink>
             </div>
 
             {/*for medium devices*/}
@@ -43,7 +44,7 @@ const Header = () => {
                 </ul>
             </div>
             <div className="navbar-end">
-                <a className="btn">Start Applying</a>
+                <a className="btn font-extrabold text-xl btn-gradient text-white">Start Applying</a>
             </div>
         </div>
     );

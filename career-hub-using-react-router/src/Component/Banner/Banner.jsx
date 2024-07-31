@@ -10,7 +10,7 @@ const Banner = () => {
                     <p className="text-lg font-medium text-[#757575] mb-8">Explore thousands of job opportunities with
                         all the information you need. Its your future. Come
                         find it. Manage all your job application from start to finish.</p>
-                    <button className="btn btn-active font-extrabold text-xl btn-gradient">Get Started</button>
+                    <button className="btn btn-active font-extrabold text-xl btn-gradient text-white">Get Started</button>
                 </div>
 
 

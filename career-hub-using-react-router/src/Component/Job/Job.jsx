@@ -1,14 +1,14 @@
-import React from 'react';
 import { CiLocationOn } from "react-icons/ci";
 import { AiOutlineDollar } from "react-icons/ai";
+import {Link} from "react-router-dom";
+
 
 const Job = ({job}) => {
-    console.log(job)
-    const {logo, job_title, company_name, remote_or_onsite, location, job_type, salary, job_description, job_responsibility, educational_requirements, experiences, contact_information} = job;
+    const {id, logo, job_title, company_name, remote_or_onsite, location, job_type, salary} = job;
     return (
         <div>
             <div className="bg-base-100 shadow-xl p-10">
-                <img className="mb-8" src={job.logo} alt="Company image"/>
+                <img className="mb-8" src={logo} alt="Company image"/>
                 <h1 className="text-2xl font-extrabold color-[#474747] mb-2">{job_title}</h1>
                 <h1 className="text-xl font-semibold text-[#757575] mb-4">{company_name}</h1>
                 <button className="btn btn-outline btn-primary mr-4">{remote_or_onsite}</button>
@@ -23,7 +23,9 @@ const Job = ({job}) => {
                         <p className="text-base font-semibold text-[#757575]">Salary : {salary}</p>
                     </div>
                 </div>
-                <button className="btn btn-active font-extrabold text-xl btn-gradient">View Details</button>
+                <Link to={`/job/${id}`}>
+                    <button className="btn btn-active font-extrabold text-xl btn-gradient text-white">View Details</button>
+                </Link>
             </div>
         </div>
     );

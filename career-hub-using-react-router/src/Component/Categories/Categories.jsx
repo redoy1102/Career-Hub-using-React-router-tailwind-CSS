@@ -6,12 +6,13 @@ import {CirclesWithBar} from "react-loader-spinner";
 
 const Categories = () => {
     const [categories, setCategories] = useState([]);
-    const [loading, setLoading] = useState(true);
-    console.log(categories)
+    const [categoryLoading, setCategoryLoading] = useState(true);
+
+    // console.log(categories)
 
     useEffect(() => {
         axios.get('categories.json')
-            .then(res => (setCategories(res.data), setLoading(false)))
+            .then(res => (setCategories(res.data), setCategoryLoading(false)))
     },[])
 
     return (
@@ -22,10 +23,10 @@ const Categories = () => {
                     need. Its your future</p>
             </div>
 
-
-            <div>
+            {/*Spinner*/}
+            <div className="flex justify-center items-center">
                 {
-                    loading && <CirclesWithBar
+                    categoryLoading && <CirclesWithBar
                         height="100"
                         width="100"
                         color="#4fa94d"

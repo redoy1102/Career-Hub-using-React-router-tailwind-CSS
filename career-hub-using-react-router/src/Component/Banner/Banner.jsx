@@ -6,7 +6,7 @@ const Banner = () => {
             <div className="flex justify-between items-center mb-32 mt-10">
 
                 <div>
-                    <h1 className="text-7xl font-extrabold mb-6">One Step Closer To Your Dream Job</h1>
+                    <h1 className="text-6xl font-extrabold mb-6">One Step Closer To Your Dream Job</h1>
                     <p className="text-lg font-medium text-[#757575] mb-8">Explore thousands of job opportunities with
                         all the information you need. Its your future. Come
                         find it. Manage all your job application from start to finish.</p>

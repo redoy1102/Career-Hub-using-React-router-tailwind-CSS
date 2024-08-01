@@ -20,7 +20,7 @@ const Footer = () => {
     }
 
     return (
-        <footer className="footer bg-neutral text-neutral-content p-10">
+        <footer className="footer bg-neutral text-neutral-content p-10 mt-32">
             <aside>
                 <p className="font-extrabold text-3xl text-white">CareerHub</p>
                 <p className="text-base">There are many variations of passages of Lorem Ipsum , but the majority have

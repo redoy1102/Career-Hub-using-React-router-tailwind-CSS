@@ -1,10 +1,9 @@
+import Blog from "../Blog/Blog.jsx";
 
 
 const Statistics = () => {
     return (
-        <div>
-            
-        </div>
+        <Blog></Blog>
     );
 };
 

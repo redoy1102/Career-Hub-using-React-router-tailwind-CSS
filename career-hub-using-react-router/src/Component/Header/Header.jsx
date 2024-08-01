@@ -5,8 +5,8 @@ import '../Banner/Banner.css'
 const Header = () => {
     const links = <>
         <li><NavLink to={paths[1]} className="text-base font-bold">Statistics</NavLink></li>
-        <li><NavLink to={paths[2]} className="text-base font-bold">Applied Jobs</NavLink></li>
-        <li><NavLink to={paths[3]} className="text-base font-bold">Blogs</NavLink></li>
+        <li><NavLink to={"/appliedjobs"} className="text-base font-bold">Applied Jobs</NavLink></li>
+        <li><NavLink to={paths[2]} className="text-base font-bold">Blogs</NavLink></li>
     </>
     return (
         <div className="navbar bg-base-100">

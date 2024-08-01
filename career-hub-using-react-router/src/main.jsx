@@ -13,9 +13,9 @@ import Blog from "./Component/Blog/Blog.jsx";
 import AppliedJobs from "./Component/AppliedJobs/AppliedJobs.jsx";
 import JobDetails from "./Component/JobDetails/JobDetails.jsx";
 
-export const paths = ["/", "/statistics", "/appliedjobs", "/blogs"]
+export const paths = ["/", "/statistics", "/blogs"]
 // eslint-disable-next-line react/jsx-key
-const elements = [<Home></Home>, <Statistics></Statistics>, <AppliedJobs></AppliedJobs>, <Blog></Blog>]
+const elements = [<Home></Home>, <Statistics></Statistics>, <Blog></Blog>]
 
 const router = createBrowserRouter([
     {
@@ -30,6 +30,11 @@ const router = createBrowserRouter([
             {
                 path: "/job/:id",
                 element: <JobDetails></JobDetails>,
+                loader: () => fetch('../jobs.json')
+            },
+            {
+                path: "/appliedjobs",
+                element: <AppliedJobs></AppliedJobs>,
                 loader: () => fetch('../jobs.json')
             }
         ],

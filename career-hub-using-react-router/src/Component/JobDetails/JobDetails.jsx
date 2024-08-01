@@ -4,9 +4,36 @@ import {CiLocationOn, CiPhone} from "react-icons/ci";
 import {MdOutlineEmail, MdOutlineSubtitles} from "react-icons/md";
 import '../Banner/Banner.css'
 
+// for toast
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
+//for saving in localStorage
+import {addJobApplication, searchJobId} from "../../Utility/localStorage.js";
+
 const JobDetails = () => {
     const jobs = useLoaderData();
     const {id} = useParams();
+
+    const handleToastJobApplicationDone = () => {
+        toast("Application is complete!")
+    }
+
+    const handleWarningToast = () => {
+        toast.warn("You have already applied for this job.");
+    }
+
+    const notify = () => {
+        const isSearchJobId = searchJobId(id)
+        if(!isSearchJobId){
+            addJobApplication(id)
+            handleToastJobApplicationDone()
+        }
+        else{
+            handleWarningToast();
+        }
+    }
+
     const job = jobs.find(job => job.id === Number(id));
 
     const {job_title, remote_or_onsite, location, job_type, salary, job_description, job_responsibility, educational_requirements, experiences, contact_information} = job;
@@ -68,8 +95,13 @@ const JobDetails = () => {
                         </div>
                     </div>
 
-                    <button className="w-full btn btn-active font-extrabold text-xl btn-gradient text-white">Apply Now</button>
+                    <button
+                        className="w-full btn btn-active font-extrabold text-xl btn-gradient text-white"
+                        onClick={notify}
+                    >Apply Now
+                    </button>
                 </div>
+                     <ToastContainer />
             </div>
         </div>
     );

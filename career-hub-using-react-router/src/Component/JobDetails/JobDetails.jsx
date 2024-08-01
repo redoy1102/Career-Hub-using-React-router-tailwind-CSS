@@ -10,6 +10,7 @@ import 'react-toastify/dist/ReactToastify.css';
 
 //for saving in localStorage
 import {addJobApplication, searchJobId} from "../../Utility/localStorage.js";
+import {Helmet} from "react-helmet-async";
 
 const JobDetails = () => {
     const jobs = useLoaderData();
@@ -39,6 +40,9 @@ const JobDetails = () => {
     const {job_title, remote_or_onsite, location, job_type, salary, job_description, job_responsibility, educational_requirements, experiences, contact_information} = job;
     return (
         <div className="my-24">
+            <Helmet>
+                <title>Career Hub | Job Details</title>
+            </Helmet>
             <div className="grid gap-6 grid-cols-12">
                 <div className="col-span-8 text-base">
                     <h1 className="text-justify mb-6">

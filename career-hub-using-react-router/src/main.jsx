@@ -12,6 +12,7 @@ import Statistics from "./Component/Statistics/Statistics.jsx";
 import Blog from "./Component/Blog/Blog.jsx";
 import AppliedJobs from "./Component/AppliedJobs/AppliedJobs.jsx";
 import JobDetails from "./Component/JobDetails/JobDetails.jsx";
+import {HelmetProvider} from "react-helmet-async";
 
 export const paths = ["/", "/statistics", "/blogs"]
 // eslint-disable-next-line react/jsx-key
@@ -43,6 +44,8 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-      <RouterProvider router={router} />
+      <HelmetProvider>
+          <RouterProvider router={router} />
+      </HelmetProvider>
   </React.StrictMode>,
 )

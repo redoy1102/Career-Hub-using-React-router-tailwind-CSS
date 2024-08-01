@@ -2,6 +2,7 @@ import {useLoaderData} from "react-router-dom";
 import {getJobApplication} from "../../Utility/localStorage.js";
 import {useEffect, useState} from "react";
 import AppliedJob from "../AppliedJob/AppliedJob.jsx";
+import {Helmet} from "react-helmet-async";
 
 const AppliedJobs = () => {
     const [appliedJobs, setAppliedJobs] = useState([]);
@@ -35,6 +36,9 @@ const AppliedJobs = () => {
 
     return (
         <div className="mb-6 mt-10">
+            <Helmet>
+                <title>Career Hub | Applied Jobs</title>
+            </Helmet>
             {/*dropdown for filter button*/}
             <div className="dropdown mb-8 flex justify-end">
                 <div tabIndex={0} role="button" className="btn m-1">Filter - {textFilterButton}</div>

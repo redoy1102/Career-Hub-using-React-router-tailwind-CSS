@@ -44,7 +44,7 @@ const Header = () => {
                 </ul>
             </div>
             <div className="navbar-end">
-                <a className="btn font-extrabold text-xl btn-gradient text-white">Start Applying</a>
+                <a className="btn btn-gradient text-white font-extrabold sm:text-sm lg:text-xl">Start Applying</a>
             </div>
         </div>
     );

@@ -5,7 +5,7 @@ const Category = ({category}) => {
     // console.log(category)
     const {id, logo, category_name, availability} = category;
     return (
-        <div className="bg-slate-50 p-6">
+        <div className="flex flex-col justify-center items-center bg-slate-50 p-6">
             <img
                 src={logo}
                 alt="Category logo"
